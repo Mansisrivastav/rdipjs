@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<script>
+			function Palindrome()
+			{
+				var rem, temp, final = 0;
+				var number = Number(document.getElementById("N").value);
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+				}
+				if(final==temp)
+				{
+					window.alert("The inputed number is Palindrome");
+				}
+				else
+				{
+					window.alert("The inputted number is not palindrome");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<br>
+		<h1>Whether a number is Palindrome or not</h1>
+		Enter The Number :<input type="text" name="n" id = "N"/>
+		<hr color="cyan">
+		<br>
+		<center><button onClick="Palindrome()">CHECK</button>
+	</body>
+</html>
+
+
+
+
+angaram:
+
+
+var word1 = [];
+var word2 = [];
+
+$('#check').click(function(){
+  var word1 = $('#word1').val().toLowerCase().split('').sort().join();
+  var word2 = $('#word2').val().toLowerCase().split('').sort().join();
+  if(word1 === word2){
+    $( "#answer" ).append( "<p>True! This is an anagram.</p>" );
+  } else { 
+    $( "#answer" ).append( "<p>False! This is an anagram.</p>" );
+  }
+})

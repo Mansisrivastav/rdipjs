@@ -1,0 +1,3 @@
+If o1==human && o2==cockroach
+    Survivor=human
+Else if o1==........
